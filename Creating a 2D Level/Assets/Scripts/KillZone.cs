@@ -11,7 +11,10 @@ public class KillZone : MonoBehaviour
     {
         if (col.gameObject.name == "Player")
         {
-            player.transform.position = respawnPoint.position;
+            Debug.Log("You were killed...");
+            SceneManager.LoadScene(2);
         }
     }
+
+
 }
