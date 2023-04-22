@@ -6,16 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneSequence : MonoBehaviour
 {
-    public bool isDone = false;
+    private bool isDone = false;
 
     void Start()
     {
         SceneManager.GetActiveScene();
         StartCoroutine(Sequence());
-        if (isDone == true)
-        {
-            StartLevel();
-        }
+        StartLevel();
     }
 
     void StartLevel()
@@ -27,7 +24,6 @@ public class SceneSequence : MonoBehaviour
     {
         yield return new WaitForSeconds(6);
         SceneManager.LoadScene(1);
-        isDone = true;
     }
     IEnumerator StartGame()
     {

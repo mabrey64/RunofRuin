@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class KillZone : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class KillZone : MonoBehaviour
         if (col.gameObject.name == "Player")
         {
             Debug.Log("You were killed...");
-            SceneManager.LoadScene(2);
+            player.transform.position = respawnPoint.position;
         }
     }
 

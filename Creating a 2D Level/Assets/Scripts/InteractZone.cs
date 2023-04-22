@@ -13,8 +13,7 @@ public class InteractZone : MonoBehaviour
         if(col.gameObject.name == "Player")
         {
             _downthenup = _thowp.GetComponent<Falling_Enemy>();
-            _downthenup.DownthenUp();
-            Debug.Log("Player has moved into Interact Zone.");
+            _downthenup.GoDown();
         }
     }
 }
