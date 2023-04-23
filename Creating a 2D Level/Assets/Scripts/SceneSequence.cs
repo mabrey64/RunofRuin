@@ -12,12 +12,6 @@ public class SceneSequence : MonoBehaviour
     {
         SceneManager.GetActiveScene();
         StartCoroutine(Sequence());
-        StartLevel();
-    }
-
-    void StartLevel()
-    {
-        StartCoroutine(StartGame());
     }
 
     IEnumerator Sequence()
@@ -25,10 +19,4 @@ public class SceneSequence : MonoBehaviour
         yield return new WaitForSeconds(6);
         SceneManager.LoadScene(1);
     }
-    IEnumerator StartGame()
-    {
-        yield return new WaitForSeconds(4);
-        SceneManager.LoadScene(2);
-    }
-
 }

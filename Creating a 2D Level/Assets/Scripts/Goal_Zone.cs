@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Goal_Zone : MonoBehaviour
 {
+    [SerializeField] private GameObject _winScreen;
     public GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class Goal_Zone : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             player.SetActive(false);
+            _winScreen.SetActive(true);
         }
     }
 
